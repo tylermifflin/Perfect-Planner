@@ -10,22 +10,25 @@ var hour9El = $("#hour-9");
 var hour10El = $("#hour-10");
 var hour11El = $("#hour-11");
 var hour12El = $("#hour-12");
-var hour1El = $("#hour-1");
-var hour2El = $("#hour-2");
-var hour3El = $("#hour-3");
-var hour4El = $("#hour-4");
-var hour5El = $("#hour-5");
+var hour13El = $("#hour-13");
+var hour14El = $("#hour-14");
+var hour15El = $("#hour-15");
+var hour16El = $("#hour-16");
+var hour17El = $("#hour-17");
 var pastEl = $(".past");
 var presentEl = $(".present");
 var futureEl = $(".future");
-var currentTime = dayjs().format('MMMM D YYYY, HH:mm');
+var currentDate = dayjs().format('MMMM D YYYY');
+var currentTime = dayjs().format('H');
 // q: how to get the current hour in 24-hour time?
 // a: dayjs().format('H')
-function displayTime () {
-  var currentTime = dayjs().format('MMMM D YYYY, HH:mm');
-  currentDayEl.text(currentTime);
+function displayDate () {
+  var currentDate = dayjs().format('MMMM D YYYY');
+  currentDayEl.text(currentDate);
 }
-$(function changetimeclass () { 
+function changetimeclass () { 
+  var currentTime = dayjs().format('H');
+
 if (currentTime > 9) {
   hour9El.addClass("past");
 } else if (currentTime < 9) {
@@ -89,7 +92,8 @@ if (currentTime > 17) {
 } else {
   hour17El.addClass("present");
 }
-});
+}
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -109,4 +113,5 @@ if (currentTime > 17) {
   //
   // TODO: Add code to display the current date in the header of the page.
 
-  displayTime();
+  displayDate();
+  changetimeclass();
