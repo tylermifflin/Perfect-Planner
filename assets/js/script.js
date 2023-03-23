@@ -2,6 +2,17 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 var currentDayEl = $("#currentDay");
+var saveBtnEl = $(".saveBtn");
+var timeBlockEl = $(".time-block");
+var textAreaEl = $(".description");
+var hourEl = $(".hour");
+var pastEl = $(".past");
+var presentEl = $(".present");
+var futureEl = $(".future");
+var currentHour = dayjs().hour();
+var currentDay = dayjs().format('MMMM D YYYY, h:mm a');
+
+
 function displayTime () {
   var currentTime = dayjs().format('MMMM D YYYY, h:mm a');
   currentDayEl.text(currentTime);
