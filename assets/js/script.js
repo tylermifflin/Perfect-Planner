@@ -18,74 +18,72 @@ var hour5El = $("#hour-5");
 var pastEl = $(".past");
 var presentEl = $(".present");
 var futureEl = $(".future");
-var currentHour = dayjs().hour();
-var currentDay = dayjs().format('MMMM D YYYY, h:mm a');
-
+var currentTime = dayjs().format('MMMM D YYYY, h:mm a');
 
 function displayTime () {
   var currentTime = dayjs().format('MMMM D YYYY, h:mm a');
   currentDayEl.text(currentTime);
 }
 $(function () { 
-if (currentHour > 9) {
+if (currentTime > 9) {
   hour9El.addClass("past");
-} else if (currentHour < 9) {
+} else if (currentTime < 9) {
   hour9El.addClass("future");
 } else {
   hour9El.addClass("present");
 }
-if (currentHour > 10) {
+if (currentTime > 10) {
   hour10El.addClass("past");
-} else if (currentHour < 10) {
+} else if (currentTime < 10) {
   hour10El.addClass("future");
 } else {
   hour10El.addClass("present");
 }
-if (currentHour > 11) {
+if (currentTime > 11) {
   hour11El.addClass("past");
-} else if (currentHour < 11) {
+} else if (currentTime < 11) {
   hour11El.addClass("future");
 } else {
   hour11El.addClass("present");
 }
-if (currentHour > 12) {
+if (currentTime > 12) {
   hour12El.addClass("past");
-} else if (currentHour < 12) {
+} else if (currentTime < 12) {
   hour12El.addClass("future");
 } else {
   hour12El.addClass("present");
 }
-if (currentHour > 1) {
+if (currentTime > 1) {
   hour1El.addClass("past");
-} else if (currentHour < 1) {
+} else if (currentTime < 1) {
   hour1El.addClass("future");
 } else {
   hour1El.addClass("present");
 }
-if (currentHour > 2) {
+if (currentTime > 2) {
   hour2El.addClass("past");
-} else if (currentHour < 2) {
+} else if (currentTime < 2) {
   hour2El.addClass("future");
 } else {
   hour2El.addClass("present");
 }
-if (currentHour > 3) {
+if (currentTime > 3) {
   hour3El.addClass("past");
-} else if (currentHour < 3) {
+} else if (currentTime < 3) {
   hour3El.addClass("future");
 } else {
   hour3El.addClass("present");
 }
-if (currentHour > 4) {
+if (currentTime > 4) {
   hour4El.addClass("past");
-} else if (currentHour < 4) {
+} else if (currentTime < 4) {
   hour4El.addClass("future");
 } else {
   hour4El.addClass("present");
 }
-if (currentHour > 5) {
+if (currentTime > 5) {
   hour5El.addClass("past");
-} else if (currentHour < 5) {
+} else if (currentTime < 5) {
   hour5El.addClass("future");
 } else {
   hour5El.addClass("present");
