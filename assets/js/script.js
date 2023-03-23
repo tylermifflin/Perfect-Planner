@@ -37,6 +37,18 @@ function changetimeclass () {
     }
   }
 }
+// created function to save the user input in local storage, used this, siblings, and description to get what the user types in the textarea, used parent and attr to get the id of the time-block containing the button that was clicked, and used setItem to save the user input in local storage
+function saveText () {
+  var text = $(this).siblings('.description').val();
+  var time = $(this).parent().attr('id');
+  localStorage.setItem(time, text);
+}
+// created function to get any user input that was saved in localStorage and set the values of the corresponding textarea elements
+function getSavedText () {
+  for (var i = 9; i <= 17; i++) {
+    $('#hour-' + i + ' .description').val(localStorage.getItem('hour-' + i));
+  }
+}
 
 
   // TODO: Add a listener for click events on the save button. This code should
@@ -60,3 +72,6 @@ function changetimeclass () {
 
   displayDate();
   changetimeclass();
+  getSavedText();
+  saveText();
+
