@@ -18,17 +18,23 @@ var hour17El = $('#hour-17');
 var pastEl = $('past');
 var presentEl = $('present');
 var futureEl = $('future');
-// q: how to get the current hour in 24-hour time?
-// a: dayjs().format('H')
+// created function displayDate to display the current date in the header of the page
 function displayDate () {
   var currentDate = dayjs().format('MMMM D YYYY');
   currentDayEl.text(currentDate);
 }
+// created function changetimeclass to apply the past, present, or future class to each time block by comparing the id to the current hour, used a for loop to make it more simple
 function changetimeclass () { 
   var currentTime = dayjs().hour();
   console.log(currentTime);
-  if (currentTime > 15) {
-    hour15El.addClass('past');
+  for (var i = 9; i <= 17; i++) {
+    if (currentTime > i) {
+      $('#hour-' + i).addClass('past');
+    } else if (currentTime < i) {
+      $('#hour-' + i).addClass('future');
+    } else {
+      $('#hour-' + i).addClass('present');
+    }
   }
 }
 
