@@ -18,8 +18,6 @@ var hour17El = $("#hour-17");
 var pastEl = $(".past");
 var presentEl = $(".present");
 var futureEl = $(".future");
-var currentDate = dayjs().format('MMMM D YYYY');
-var currentTime = dayjs().format('H');
 // q: how to get the current hour in 24-hour time?
 // a: dayjs().format('H')
 function displayDate () {
@@ -27,72 +25,10 @@ function displayDate () {
   currentDayEl.text(currentDate);
 }
 function changetimeclass () { 
-  var currentTime = dayjs().format('H');
+  var currentTime = dayjs().hour();
+  console.log(currentTime);
+}
 
-if (currentTime > 9) {
-  hour9El.addClass("past");
-} else if (currentTime < 9) {
-  hour9El.addClass("future");
-} else {
-  hour9El.addClass("present");
-}
-if (currentTime > 10) {
-  hour10El.addClass("past");
-} else if (currentTime < 10) {
-  hour10El.addClass("future");
-} else {
-  hour10El.addClass("present");
-}
-if (currentTime > 11) {
-  hour11El.addClass("past");
-} else if (currentTime < 11) {
-  hour11El.addClass("future");
-} else {
-  hour11El.addClass("present");
-}
-if (currentTime > 12) {
-  hour12El.addClass("past");
-} else if (currentTime < 12) {
-  hour12El.addClass("future");
-} else {
-  hour12El.addClass("present");
-}
-if (currentTime > 13) {
-  hour13El.addClass("past");
-} else if (currentTime < 13) {
-  hour13El.addClass("future");
-} else {
-  hour13El.addClass("present");
-}
-if (currentTime > 14) {
-  hour14El.addClass("past");
-} else if (currentTime < 14) {
-  hour14El.addClass("future");
-} else {
-  hour14El.addClass("present");
-}
-if (currentTime > 15) {
-  hour15El.addClass("past");
-} else if (currentTime < 15) {
-  hour15El.addClass("future");
-} else {
-  hour15El.addClass("present");
-}
-if (currentTime > 16) {
-  hour16El.addClass("past");
-} else if (currentTime < 16) {
-  hour16El.addClass("future");
-} else {
-  hour16El.addClass("present");
-}
-if (currentTime > 17) {
-  hour17El.addClass("past");
-} else if (currentTime < 17) {
-  hour17El.addClass("future");
-} else {
-  hour17El.addClass("present");
-}
-}
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
