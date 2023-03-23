@@ -18,13 +18,14 @@ var hour5El = $("#hour-5");
 var pastEl = $(".past");
 var presentEl = $(".present");
 var futureEl = $(".future");
-var currentTime = dayjs().format('MMMM D YYYY, h:mm a');
-
+var currentTime = dayjs().format('MMMM D YYYY, HH:mm');
+// q: how to get the current hour in 24-hour time?
+// a: dayjs().format('H')
 function displayTime () {
-  var currentTime = dayjs().format('MMMM D YYYY, h:mm a');
+  var currentTime = dayjs().format('MMMM D YYYY, HH:mm');
   currentDayEl.text(currentTime);
 }
-$(function () { 
+$(function changetimeclass () { 
 if (currentTime > 9) {
   hour9El.addClass("past");
 } else if (currentTime < 9) {
@@ -53,40 +54,40 @@ if (currentTime > 12) {
 } else {
   hour12El.addClass("present");
 }
-if (currentTime > 1) {
-  hour1El.addClass("past");
-} else if (currentTime < 1) {
-  hour1El.addClass("future");
+if (currentTime > 13) {
+  hour13El.addClass("past");
+} else if (currentTime < 13) {
+  hour13El.addClass("future");
 } else {
-  hour1El.addClass("present");
+  hour13El.addClass("present");
 }
-if (currentTime > 2) {
-  hour2El.addClass("past");
-} else if (currentTime < 2) {
-  hour2El.addClass("future");
+if (currentTime > 14) {
+  hour14El.addClass("past");
+} else if (currentTime < 14) {
+  hour14El.addClass("future");
 } else {
-  hour2El.addClass("present");
+  hour14El.addClass("present");
 }
-if (currentTime > 3) {
-  hour3El.addClass("past");
-} else if (currentTime < 3) {
-  hour3El.addClass("future");
+if (currentTime > 15) {
+  hour15El.addClass("past");
+} else if (currentTime < 15) {
+  hour15El.addClass("future");
 } else {
-  hour3El.addClass("present");
+  hour15El.addClass("present");
 }
-if (currentTime > 4) {
-  hour4El.addClass("past");
-} else if (currentTime < 4) {
-  hour4El.addClass("future");
+if (currentTime > 16) {
+  hour16El.addClass("past");
+} else if (currentTime < 16) {
+  hour16El.addClass("future");
 } else {
-  hour4El.addClass("present");
+  hour16El.addClass("present");
 }
-if (currentTime > 5) {
-  hour5El.addClass("past");
-} else if (currentTime < 5) {
-  hour5El.addClass("future");
+if (currentTime > 17) {
+  hour17El.addClass("past");
+} else if (currentTime < 17) {
+  hour17El.addClass("future");
 } else {
-  hour5El.addClass("present");
+  hour17El.addClass("present");
 }
 });
   // TODO: Add a listener for click events on the save button. This code should
