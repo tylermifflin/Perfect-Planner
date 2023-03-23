@@ -41,6 +41,56 @@ if (currentHour > 10) {
 } else {
   hour10El.addClass("present");
 }
+if (currentHour > 11) {
+  hour11El.addClass("past");
+} else if (currentHour < 11) {
+  hour11El.addClass("future");
+} else {
+  hour11El.addClass("present");
+}
+if (currentHour > 12) {
+  hour12El.addClass("past");
+} else if (currentHour < 12) {
+  hour12El.addClass("future");
+} else {
+  hour12El.addClass("present");
+}
+if (currentHour > 1) {
+  hour1El.addClass("past");
+} else if (currentHour < 1) {
+  hour1El.addClass("future");
+} else {
+  hour1El.addClass("present");
+}
+if (currentHour > 2) {
+  hour2El.addClass("past");
+} else if (currentHour < 2) {
+  hour2El.addClass("future");
+} else {
+  hour2El.addClass("present");
+}
+if (currentHour > 3) {
+  hour3El.addClass("past");
+} else if (currentHour < 3) {
+  hour3El.addClass("future");
+} else {
+  hour3El.addClass("present");
+}
+if (currentHour > 4) {
+  hour4El.addClass("past");
+} else if (currentHour < 4) {
+  hour4El.addClass("future");
+} else {
+  hour4El.addClass("present");
+}
+if (currentHour > 5) {
+  hour5El.addClass("past");
+} else if (currentHour < 5) {
+  hour5El.addClass("future");
+} else {
+  hour5El.addClass("present");
+}
+});
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
