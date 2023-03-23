@@ -37,7 +37,7 @@ function changetimeclass () {
     }
   }
 }
-// created function to save the user input in local storage, used this, siblings, and description to get what the user types in the textarea, used parent and attr to get the id of the time-block containing the button that was clicked, and used setItem to save the user input in local storage
+// created function to save the user input in local storage, used this, siblings to get the right box that the user types in, and description to get what the user types in the textarea, used parent and attr to get the id of the time-block containing the button that was clicked, and used setItem to save the user input in local storage
 function saveText () {
   var text = $(this).siblings('.description').val();
   var time = $(this).parent().attr('id');
