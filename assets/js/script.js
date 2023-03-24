@@ -3,6 +3,7 @@
 // in the html.
 var currentDayEl = $('#currentDay');
 var saveBtnEl = $('saveBtn');
+var saveBtns = document.querySelectorAll('.saveBtn');
 var timeBlockEl = $('time-block');
 var textAreaEl = $('description');
 var hourEl = $('hour');
@@ -37,6 +38,11 @@ function changetimeclass () {
     }
   }
 }
+// used a querySelectorAll above to get all the savebtn classes, used a for loop to add an event listener to each button
+for (var i = 0; i < saveBtns.length; i++) {
+  saveBtns[i].addEventListener('click', saveText);
+}
+
 // created function to save the user input in local storage, used this, siblings to get the right box that the user types in, and description to get what the user types in the textarea, used parent and attr to get the id of the time-block containing the button that was clicked, and used setItem to save the user input in local storage
 function saveText () {
   var text = $(this).siblings('.description').val();
@@ -49,6 +55,7 @@ function getSavedText () {
     $('#hour-' + i + ' .description').val(localStorage.getItem('hour-' + i));
   }
 }
+
 
 
   // TODO: Add a listener for click events on the save button. This code should
@@ -73,5 +80,5 @@ function getSavedText () {
   displayDate();
   changetimeclass();
   getSavedText();
-  saveText();
+
 
