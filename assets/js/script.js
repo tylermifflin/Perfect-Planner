@@ -1,12 +1,8 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
+// created variables for each id and class that i needed to use in my code, I decided to use separate ids for each hour to set up my for loop for the changetimeclass function
 var currentDayEl = $('#currentDay');
-var saveBtnEl = $('saveBtn');
-var saveBtns = document.querySelectorAll('.saveBtn');
+var saveBtns = $('.saveBtn');
 var timeBlockEl = $('time-block');
 var textAreaEl = $('description');
-var hourEl = $('hour');
 var hour9El = $('#hour-9');
 var hour10El = $('#hour-10');
 var hour11El = $('#hour-11');
@@ -38,7 +34,7 @@ function changetimeclass () {
     }
   }
 }
-// used a querySelectorAll above to get all the savebtn classes, used a for loop to add an event listener to each button
+// used a query slector above to get all the savebtn classes, used a for loop to add an event listener to each button
 for (var i = 0; i < saveBtns.length; i++) {
   saveBtns[i].addEventListener('click', saveText);
 }
