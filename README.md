@@ -14,7 +14,7 @@ Noteworthy Features: -This app uses HTML, CSS, Javascript, Bootstrap, Google Fon
 
 -I learned how to use for loops more effectively and efficiently. I originally started writing a lot of if statements to change my classes based on the time for past, present, and future. I realized after a lot of lines of code, that a for loop would do the same thing and be much easier to read and change!
 
-Here is a link to my deployed application and a screenshot to my page: 
+Here is a link to my deployed application and a screenshot to my page: https://github.com/tylermifflin/Perfect-Planner
 
 ![Screenshot 2023-03-24 at 2 36 49 PM](https://user-images.githubusercontent.com/123903709/227639785-d936ccb5-a679-4b47-bc1c-fbd3572e73d6.png)
 <img width="979" alt="Screenshot 2023-03-24 at 2 37 21 PM" src="https://user-images.githubusercontent.com/123903709/227639807-57934b2d-0b84-4628-921d-1faa951ad099.png">
